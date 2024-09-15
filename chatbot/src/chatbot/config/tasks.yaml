@@ -1,0 +1,48 @@
+# tasks.yaml
+personalized_recommendations:
+  description: >
+    Analyze the customer's preferences, browsing history, and current query to provide
+    personalized product recommendations.
+  expected_output: >
+    A list of 3-5 personalized product recommendations with explanations of why each
+    product might be suitable for the customer, including relevant details such as price,
+    ratings, and any current promotions.
+  agent: shop_assistant
+  instructions: >
+    1. Review the customer's browsing history and past purchases if available.
+    2. Analyze the current query to understand immediate interests.
+    3. Use collaborative filtering techniques to find similar products liked by customers with similar preferences.
+    4. Consider factors such as price range, product category, and current trends.
+    5. Present each recommendation with a brief explanation of its features and relevance to the customer.
+
+answer_faq:
+  description: >
+    Provide accurate and helpful answers to frequently asked questions about products,
+    shipping, returns, and other common inquiries.
+  expected_output: >
+    A clear and concise answer to the customer's question, with additional relevant
+    information or links to more detailed resources when appropriate.
+  agent: shop_assistant
+  instructions: >
+    1. Analyze the customer's question to identify the main topic and any subtopics.
+    2. Access the FAQ database to retrieve the most relevant pre-written answer.
+    3. If the question doesn't match any pre-written FAQ exactly, combine information from multiple relevant FAQs.
+    4. Personalize the response by addressing any specific details mentioned in the customer's query.
+    5. If the answer involves steps or multiple points, present them in a clear, numbered list.
+    6. Provide links to relevant policy pages or product information when applicable.
+
+track_order:
+  description: >
+    Access the order tracking system to provide customers with real-time updates on
+    their order status, including estimated delivery dates and any potential issues.
+  expected_output: >
+    A detailed status update of the customer's order, including current location,
+    estimated delivery date, and any relevant shipping or handling information.
+  agent: shop_assistant
+  instructions: >
+    1. Verify the order number provided by the customer.
+    2. Access the order tracking database to retrieve the most up-to-date information.
+    3. Provide the current status of the order (e.g., processing, shipped, out for delivery).
+    4. Include the estimated delivery date and any tracking numbers if available.
+    5. If there are any delays or issues, explain them clearly and provide next steps or resolution options.
+    6. Offer to set up notifications for future updates if such a feature is available.
